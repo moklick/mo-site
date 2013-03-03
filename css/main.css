@@ -1,3 +1,5 @@
+@import  url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
 /*
  * HTML5 Boilerplate
  *
@@ -5,18 +7,10 @@
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
-
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
-
-html,
-button,
-input,
-select,
-textarea {
+html,button,input,select,textarea {
     color: #222;
 }
 
@@ -30,7 +24,6 @@ body {
  * These selection declarations have to be separate.
  * Customize the background color to match your design.
  */
-
 ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -44,7 +37,6 @@ body {
 /*
  * A better looking default horizontal rule
  */
-
 hr {
     display: block;
     height: 1px;
@@ -57,7 +49,6 @@ hr {
 /*
  * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
  */
-
 img {
     vertical-align: middle;
 }
@@ -65,7 +56,6 @@ img {
 /*
  * Remove default fieldset styles.
  */
-
 fieldset {
     border: 0;
     margin: 0;
@@ -75,7 +65,6 @@ fieldset {
 /*
  * Allow only vertical resizing of textareas.
  */
-
 textarea {
     resize: vertical;
 }
@@ -83,246 +72,238 @@ textarea {
 /* ==========================================================================
    Chrome Frame prompt
    ========================================================================== */
-
 .chromeframe {
-    margin: 0.2em 0;
+    margin: .2em 0;
     background: #ccc;
     color: #000;
-    padding: 0.2em 0;
+    padding: .2em 0;
 }
 
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-body{
-    font-family:'Open Sans', sans-serif;
-    background:#efefef;
-    font-weight:400;
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: url(../img/noise-bg.jpg) repeat 0 0 #FFF;
+    font-weight: 400;
+    color: #222;
 }
 
-.global{
-    max-width:1180px;
-    width:100%;
-    margin:0 auto;
-}
-.main{
-    padding:0 .5em;
+.global {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-h1{
+.main {
+    padding: 0 .5em;
+}
+
+h1 {
     font-size: 1.5em;
     font-weight: 400;
-    line-height:1em;
-    text-transform:uppercase;
-    margin: 0 0 2em 0
-}
-.logo{
-    width:90px;
-    height:0;
-    background:red;
-    position:absolute;
-    left:50%;
-    top:-3px;
-    margin-left:-45px;
-    border:3px solid #555;
-    border-top:none;
-    -webkit-transition:height .35s;
-    -moz-transition:height .35s;
-    -transition:height .35s;
-}
-.site-name{
-    text-align:center;
-}
-header{
-     margin-top:6.25em;
-      border-bottom:3px solid #333;
-      color:#555;
-}
-h1 span{
-    display:block;
-    color:red;
-}
-
-h2{
-    text-align:center;
-    font-size:2em;
-    padding:2em 0 1.2em 0;
-    font-weight: 400;
-    text-transform:uppercase;
-}
-
-.work h2{
-    padding:1em 0 1.2em 0;
-    -moz-transition:padding 0.35s;
-    -webkit-transition:padding 0.35s;
-    transition:padding 0.35s;
-}
-
-nav{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    background:#333;
+    line-height: 1em;
     text-transform: uppercase;
-
-    z-index: 5;
-     cursor:pointer;
+    margin: 3.25em 0 2em;
 }
 
-nav ul li{
-    font-size:1.1em;
-    float:left;
+.logo {
+    display: block;
+    width: 4.6em;
+    height: 8.5em;
+    background: url(../img/mk-logo.png) no-repeat center 3.35em transparent;
+    position: absolute;
+    left: 50%;
+    top: 2em;
+    margin-left: -2.3em;
+/*   -webkit-transition:all .35s;
+    -moz-transition:display .35s;
+    -transition:all .35s;*/
+}
+
+.site-name {
+    text-align: center;
+}
+
+header {
+    margin-top: 6.25em;
+    border-bottom: 3px solid #333;
+}
+
+h1 span {
+    display: block;
+    color: #bc5d5d;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+    padding: 2em 0 1.2em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.work h2 {
+    padding: 1em 0 1.2em;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    text-transform: uppercase;
+    z-index: 5;
+    cursor: pointer;
+}
+
+nav ul li {
+    font-size: 1.1em;
+    float: left;
     width: 33.3333333%;
     text-align: center;
-    color:#efefef;
+    color: #efefef;
 }
 
-nav ul li:hover{
-    background:#555;
+nav ul li:hover {
+    background: #555;
 }
 
-nav ul li span{
-    display:block;
-    padding:0.25em 0;
+nav ul li span {
+    display: block;
+    padding: .25em 0;
 }
 
-nav ul li .bordered{
-    border-left:1px solid #999; 
-    border-right:1px solid #999
+nav ul li .bordered {
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
 }
 
-
-.grid .column-3, .grid .column-2,.grid .column-1{
-    width:100%;
-    float:none;
+.grid .column-3,.grid .column-2,.grid .column-1 {
+    width: 100%;
+    float: none;
 }
 
-figure{
-    background:red;
-    border:3px solid #555;
-    max-height:300px;
-    overflow:hidden;
+figure {
+    background: #bc5d5d;
+    border: 3px solid #222;
+    max-height: 300px;
+    overflow: hidden;
 }
 
-figure img{
+figure img {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
-.project-description{
-    padding:20px;
-    display:none;
+.project-description {
+    padding: 20px;
+    display: none;
 }
 
-.social-list{
-    padding:0 0 1.25em 0;
-    list-style:none;
+.social-list {
+    padding: 0 0 1.25em;
+    list-style: none;
     text-transform: uppercase;
     font-size: .9em;
 }
 
-.social-list li{
-    margin-bottom:.7em;
+.social-list li {
+    margin-bottom: .7em;
 }
 
-.social-list a{
-    color:#555;
+.social-list a {
+    color: #222;
     text-decoration: none;
-    border-bottom:3px solid #ddd;
-      -webkit-transition:color .35s;
-    -moz-transition:color .35s;
-    -transition:color .35s;
-
+    border-bottom: 3px solid #eaeaea;
+    -webkit-transition: color .35s;
+    -moz-transition: color .35s;
+    -transition: color .35s;
 }
-.social-list a:hover{
-    color:#222;
+
+.social-list a:hover {
+    color: #222;
     text-decoration: none;
-    border-bottom:3px solid #ddd;
+    border-bottom: 3px solid #ddd;
 }
 
-.project-title{
-    position:absolute;    
-    bottom:1em;   
-    text-align:center;
-    width:100%;
-    background:#555;
-    color:#eee;
-    padding:0.25em 0;
-    text-transform:uppercase;
-    font-size:.85em;
+.project-title {
+    position: absolute;
+    bottom: 1em;
+    text-align: center;
+    width: 100%;
+    background: #333;
+    color: #eee;
+    padding: .25em 0;
+    text-transform: uppercase;
+    font-size: .85em;
 }
 
-.work figure{
-    width:75%;
-    margin:0 auto 2.25em auto;
-    position:relative;
+.work figure {
+    width: 75%;
+    margin: 0 auto 2.25em;
+    position: relative;
 }
 
-.information{
+.information {
     font-size: 1.25em;
     text-align: center;
-    text-transform:uppercase;
+    text-transform: uppercase;
 }
-.info-wide{
-    display:none;
+
+.info-wide {
+    display: none;
 }
-.info-mobile{
-    display:block;
+
+.info-mobile {
+    display: block;
     font-size: 1.25em;
 }
-.module{
-    margin-bottom:2.25em;
-}
-.module-title{
-    color:red;
-    border-bottom:3px solid #ddd;
-    margin-bottom:1em;
-    font-size:1.25em;
-    text-transform:uppercase;
 
-}
-.module-text{
-    font-size:.9em;
+.module {
+    margin-bottom: 2.25em;
 }
 
-.cv{
-    color:red;
-    font-size:.9em;
-    display:inline;
-    text-transform:uppercase;
-
+.module-title {
+    color: #bc5d5d;
+    border-bottom: 3px solid #eaeaea;
+    margin-bottom: 1em;
+    font-size: 1.25em;
+    text-transform: uppercase;
 }
-footer{
-    border-top:3px solid #333;
-    margin-top:5em;
-    margin-bottom:2em;
+
+.module-text {
+    font-size: .9em;
+}
+
+.cv {
+    color: #bc5d5d;
+    font-size: .9em;
+    display: inline;
+    text-transform: uppercase;
+}
+
+footer {
+    border-top: 3px solid #333;
+    margin-top: 5em;
+    margin-bottom: 2em;
     text-align: center;
 }
-
-
-
-
-
-
-
 
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
 /*
  * Image replacement
  */
-
 .ir {
     background-color: transparent;
     border: 0;
     overflow: hidden;
-    /* IE 6/7 fallback */
-    *text-indent: -9999px;
+/* IE 6/7 fallback */
+    text-indent: -9999px;
 }
 
 .ir:before {
@@ -335,7 +316,6 @@ footer{
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
-
 .hidden {
     display: none !important;
     visibility: hidden;
@@ -344,10 +324,9 @@ footer{
 /*
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
  */
-
 .visuallyhidden {
     border: 0;
-    clip: rect(0 0 0 0);
+    clip: rect(0000);
     height: 1px;
     margin: -1px;
     overflow: hidden;
@@ -360,9 +339,7 @@ footer{
  * Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p
  */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus {
     clip: auto;
     height: auto;
     margin: 0;
@@ -374,9 +351,8 @@ footer{
 /*
  * Hide visually and from screenreaders, but maintain layout
  */
-
 .invisible {
-    visibility: hidden;u
+    visibility: hidden;
 }
 
 /*
@@ -390,11 +366,11 @@ footer{
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+.clearfix:before,.clearfix:after {
+    content: " ";
+/* 1 */
+    display: table;
+/* 2 */
 }
 
 .clearfix:after {
@@ -405,28 +381,31 @@ footer{
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-
 .clearfix {
-    *zoom: 1;
+    zoom: 1;
 }
 
-.seperator{
-    width:100%;
-    border-bottom:3px solid #dfdfdf;
-    padding:2em 0 1.2em 0;
+.seperator {
+    background:url(../img/seperator.png) no-repeat center 0 transparent;
+    width: auto;
+    max-width:100%;
+    height: 4em;
+    margin-top: 4.25em;
 }
-.link{
-    color:red;
+
+.link {
+    color: #bc5d5d;
     text-decoration: none;
-    border-bottom:3px solid #ddd;
-    -webkit-transition:all .3s;
-    -moz-transition:all .3s;
-    -transition:all .3s;
-    cursor:pointer;
+    border-bottom: 3px solid #eaeaea;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -transition: all .3s;
+    cursor: pointer;
 }
-.link:hover{
-     border-bottom:3px solid red;
-     color:#333;
+
+.link:hover {
+    border-bottom: 3px solid #bc5d5d;
+    color: #333;
 }
 
 /* ==========================================================================
@@ -434,192 +413,220 @@ footer{
    Theses examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-
 /*Display 3 per row for medium displays (like mobile phones in landscape or smaller tablets)*/
-@media screen and (min-width: 28em) {
-    nav ul li .bordered{
-    border:none;
-}
-h1{
-    font-size: 1em;
-    margin:0;
-}
-    header{
-        margin-top:0;
-    border-bottom:3px solid #333;
-}
-nav{
-    position:relative;
-    width:auto;
-}
-nav ul li, nav ul li:hover{
-    color:#555;
-    font-size:1em;
-}
-nav li span{
-    border:none;
-}
-
-    .main{
-        padding:0 0.85em;
-        margin-top:1em;
-    }
-    .site-name{
-        text-align:left;
-        width:50px;
-        float:left;
-    }
-.project-title{
-	font-size:1em;
-}
-    nav ul{
-        float:right;
-        margin:2.5em 0 0 0;
-    }
-    nav ul li{
-        margin-left:20px;
-        width:auto;
-    }
-
-
-
-
-}
-
-@media screen and (min-width: 37em) {
-    .work h2{
-        padding:3.5em 0 1.75em 0;
-    }
-    .logo{
-        border-bottom:3px solid #555;
-        height:125px;
-    }
-
-
-}
-@media screen and (min-width: 43em) {
-
-    .grid .column-2 .column{
-        width:50%;
-    }
-    .grid .column-3 .column{
-        width:33.33333333%;
-    }
-    .grid .column-3 .column,.grid .column-2 .column{
-        float:left;
-    }
-    .grid .column-2 .module{
-        width:95%;
-    }
-    .first-column{
-        float:left;
-    }
-    .last-column{
-        float:right;
-    }
-    .work figure{
-        width:90%;
-        margin:0 auto 2.25em auto;
-        position:relative;
-    }
-    .module{
-        width:90%;
-        margin:0 auto;
-      /*  margin: 0 auto 2.25em auto;*/
-    }
-    .info-wide{
-        display:block;
+@media screen and (min-width:28em) {
+    .logo {
+        background: url(../img/mk-logo.png) no-repeat center 3.35em #bc5d5d;
+        height: 8.5em;
+        width: 5em;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        margin-left: -2.5em;
+        border: 3px solid #222;
+        border-top: none;
+        display: block;
     }
     
-    .info-mobile{
-        display:none;
+    nav {
+        background: transparent;
+        float: right;
+    }
+    
+    nav ul li .bordered {
+        border: none;
+    }
+    
+    h1 {
+        font-size: 1em;
+        margin: 0;
+    }
+    
+    header {
+        margin-top: 0;
+        border-bottom: 3px solid #333;
+    }
+    
+    nav {
+        position: relative;
+        width: auto;
+    }
+    
+    nav ul {
+        float: right;
+        margin: 2.5em 0 0;
+    }
+    
+    nav ul li,nav ul li:hover {
+        color: #555;
+        font-size: .8em;
+        margin-left: 1em;
+        width: auto;
+    }
+    
+    nav li span {
+        border: none;
+    }
+    
+    .main {
+        padding: 0 .85em;
+        margin-top: 1em;
+    }
+    
+    .site-name {
+        text-align: left;
+        width: 50px;
+        float: left;
+        font-size: .8em;
+    }
+    
+    .project-title {
+        font-size: 1em;
+    }
+    
+    .work h2 {
+        padding: 3.5em 0 1.75em;
+    }
+    .seperator{
+        margin-top: 6.25em;
+    }
+
+}
+
+@media screen and (min-width: 43em) {
+    .logo {
+        width: 6em;
+        margin-left: -3em;
+    }
+    
+    .grid .column-2 .column {
+        width: 50%;
+    }
+    
+    .grid .column-3 .column {
+        width: 33.33333333%;
+    }
+    
+    .grid .column-3 .column,.grid .column-2 .column {
+        float: left;
+    }
+    
+    .grid .column-2 .module {
+        width: 95%;
+    }
+    
+    .first-column {
+        float: left;
+    }
+    
+    .last-column {
+        float: right;
+    }
+    
+    .site-name {
+        font-size: 1em;
+    }
+    
+    nav ul li,nav ul li:hover {
+        color: #555;
+        font-size: 1em;
+        margin-left: 2.15em;
+        width: auto;
+    }
+    
+    .work figure {
+        width: 90%;
+        margin: 0 auto 2.25em;
+        position: relative;
+    }
+    
+    .module {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .info-wide {
+        display: block;
+    }
+    
+    .info-mobile {
+        display: none;
     }
 
 }
 
 @media screen and (min-width: 50em) {
+    
 
 }
 
-
-
-
-
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
+@media print,-o-min-device-pixel-ratio 54,-webkit-min-device-pixel-ratio 125,min-resolution 120dpi {
     /* Style adjustments for high resolution devices */
+    
+
 }
 
 /* ==========================================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
    ========================================================================== */
-
 @media print {
     * {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
         box-shadow: none !important;
         text-shadow: none !important;
     }
-
-    a,
-    a:visited {
+    
+    a,a:visited {
         text-decoration: underline;
     }
-
+    
     a[href]:after {
         content: " (" attr(href) ")";
     }
-
+    
     abbr[title]:after {
         content: " (" attr(title) ")";
     }
-
+    
     /*
-     * Don't show links for images, or javascript/internal links
-     */
-
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
+         * Don't show links for images, or javascript/internal links
+         */
+    .ir a:after,a[href^=javascript:]:after,a[href^=#]:after {
         content: "";
     }
-
-    pre,
-    blockquote {
+    
+    pre,blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
-
+    
     thead {
-        display: table-header-group; /* h5bp.com/t */
+        display: table-header-group;
+    /* h5bp.com/t */
     }
-
-    tr,
-    img {
+    
+    tr,img {
         page-break-inside: avoid;
     }
-
+    
     img {
         max-width: 100% !important;
     }
-
+    
     @page {
-        margin: 0.5cm;
+        margin: .5cm;
     }
-
-    p,
-    h2,
-    h3 {
+    
+    p,h2,h3 {
         orphans: 3;
         widows: 3;
     }
-
-    h2,
-    h3 {
+    
+    h2,h3 {
         page-break-after: avoid;
     }
+
 }
