@@ -242,9 +242,10 @@ figure img {
 }
 
 .work figure {
-    width: 75%;
-    margin: 0 auto 2.25em;
+    margin: 0 auto 2.25em auto;
     position: relative;
+    max-width:375px;
+    max-height:200px;
 }
 
 .information {
@@ -295,6 +296,13 @@ footer {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+       .grid .column-2 .column {
+        width: 100%;
+    }
+    
+    .grid .column-3 .column {
+        width: 100%;
+    }
 /*
  * Image replacement
  */
@@ -488,8 +496,9 @@ footer {
         padding: 3.5em 0 1.75em;
     }
     .seperator{
-        margin-top: 6.25em;
+        margin: 7em 0 2em 0;
     }
+
 
 }
 
