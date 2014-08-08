@@ -1,7 +1,8 @@
  var $contactForm = $('#contact-form'),
     $sendBtn = $contactForm.find('button'),
     $success = $('.success'),
-    $error = $('.error');
+    $error = $('.error'),
+    timeout;
 
  $contactForm .find('input,textarea').on('focus', function(){
     $(this).parents('.input-wrapper').find('.error').removeClass('active');
@@ -29,6 +30,7 @@
 
             $error.removeClass('active');
             $success.removeClass('active');
+            clearTimeout(timeout);
 
              if (data.invalid) {
                  if (data.invalid.email) {
@@ -40,7 +42,7 @@
              } else {
                  $contactForm.find('input, textarea').val('');
                  $success.addClass('active');
-                 setTimeout(function(){
+                 timeout = setTimeout(function(){
                     $success.removeClass('active');
                  },3000);
              }
@@ -50,4 +52,11 @@
              $sendBtn.removeClass('is-loading');
          }
      });
+ });
+
+
+ $('nav a').on('click', function(evt){
+    evt.preventDefault();
+    var href = $(this).attr('href');
+    $('html,body').animate({ scrollTop : $(href).offset().top }, 600)
  });

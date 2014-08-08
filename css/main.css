@@ -159,6 +159,13 @@ nav ul li.bordered {
     border-left: 1px solid #999;
     border-right: 1px solid #999;
 }
+nav a{
+    color:#fff;
+    text-decoration: none;
+}
+nav a:hover{
+    text-decoration: none;
+}
 .grid .column-3, .grid .column-2, .grid .column-1 {
     width: 100%;
     float: none;
@@ -561,6 +568,7 @@ footer .seperator-light{
         margin-left: 1em;
         width: auto;
         font-size:1em;
+        padding:  0;
     }
     nav ul li:hover {
         color: #bc5d5d;
@@ -568,6 +576,14 @@ footer .seperator-light{
     }
     nav li span {
         border: none;
+    }
+    nav a{
+        color:#555;
+        text-decoration: none;
+    }
+    nav a:hover{
+        color: #bc5d5d;
+        text-decoration: none;
     }
     .main {
         padding: 0 .85em;
