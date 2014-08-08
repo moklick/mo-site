@@ -29,13 +29,19 @@ body {
  * These selection declarations have to be separate.
  * Customize the background color to match your design.
  */
-
+::-webkit-selection {
+    background: #555;
+    color:white;
+    text-shadow: none;
+}
 ::-moz-selection {
-    background: #b3d4fc;
+    background: #555;
+    color:white;
     text-shadow: none;
 }
 ::selection {
-    background: #b3d4fc;
+    background: #555;
+    color:white;
     text-shadow: none;
 }
 /*
@@ -357,9 +363,9 @@ figure:hover .project-description{
 footer {
     margin-bottom: 2em;
     text-align: center;
+    position: relative;
 }
 footer .seperator {
-    opacity: 0.025;
     margin-top:2em;
     margin-bottom: 4em;
 }
@@ -467,7 +473,11 @@ footer .seperator {
     max-width: 100%;
     height: 4em;
     margin-top: 4.25em;
-    opacity: 0.025;
+    opacity: 0;
+}
+footer .seperator-light{
+    opacity: 0;
+    background: url(../img/seperator-light.png) no-repeat center 0 transparent;
 }
 .link {
     color: #bc5d5d;
@@ -496,7 +506,26 @@ footer .seperator {
     text-decoration: none;
     border-color: #bc5d5d;
 }
-
+.webkid-logo{
+    width: 3.25em;
+    display: block;
+    opacity: .3;
+    position: absolute;
+    margin-left: -1.625em;
+    top: .6em;
+    left: 50%;
+    z-index: 9999;
+    cursor: pointer;
+    -webkit-transition:opacity .25s;
+    -moz-transition:opacity .25s;
+    transition:opacity .25s;
+}
+.webkid-logo:hover{
+    opacity: .5;
+}
+.webkid-logo img{
+    width: inherit;
+}
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    Theses examples override the primary ('mobile first') styles.
