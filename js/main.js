@@ -25,28 +25,17 @@
              message: $contactForm.find('textarea').val()
          },
          success: function(data) {
-             $sendBtn.removeClass('is-loading');
-             var data = JSON.parse(data);
+            $sendBtn.removeClass('is-loading');
 
             $error.removeClass('active');
             $success.removeClass('active');
             clearTimeout(timeout);
 
-             if (data.invalid) {
-                 if (data.invalid.email) {
-                     $('.email-error').text(data.invalid.email).addClass('active');
-                 }
-                 if (data.invalid.message) {
-                     $('.message-error').text(data.invalid.message).addClass('active');
-                 }
-             } else {
-                 $contactForm.find('input, textarea').val('');
-                 $success.addClass('active');
-                 timeout = setTimeout(function(){
-                    $success.removeClass('active');
-                 },3000);
-             }
-
+            $contactForm.find('input, textarea').val('');
+            $success.addClass('active');
+            timeout = setTimeout(function(){
+            $success.removeClass('active');
+            },3000);
          },
          error: function() {
              $sendBtn.removeClass('is-loading');
