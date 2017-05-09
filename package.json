@@ -7,7 +7,7 @@
     "doc": "doc"
   },
   "scripts": {
-    "copy": "cp node_modules/jquery/dist/jquery.min.js js/jquery.min.js && cp node_modules/font-awesome/css/font-awesome.min.css css/font-awesome.min.css"
+    "copy": "cp node_modules/jquery/dist/jquery.min.js js/jquery.min.js && cp node_modules/font-awesome/css/font-awesome.min.css css/font-awesome.min.css && cp -R node_modules/font-awesome/fonts ."
   },
   "repository": {
     "type": "git",
