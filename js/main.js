@@ -18,6 +18,7 @@
      $.ajax({
          type: "POST",
          url: $(this).attr('action'),
+         dataType: 'json',
          data: {
              name: 'moritzklack.com',
              email: $('.email-field').val(),
