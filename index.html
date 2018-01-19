@@ -1,376 +1,186 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Moritz Klack - Interactive Developer</title>
-    <meta name="description" content="Moritz Klack is an interactive developer from Berlin, specialized in data visualizations, interactive maps and web applications in general.">
-    <meta name="robots" content="index, follow">
-    <meta name="revisit-after" content="2 days">
-    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Moritz Klack - Interactive Developer, Data Visualisations, Maps, Web Apps</title>
+  <meta name="description" content="Morizt develops interactive data visualisations, web apps and map applications">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Source+Sans+Pro:400" rel="stylesheet">
+  <style>
+    ::-moz-selection {
+      color: white;
+      background: #741e80;
+    }
 
-    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
-    <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
-    <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196">
-    <link rel="icon" type="image/png" href="favicon-160x160.png" sizes="160x160">
-    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
-    <meta name="msapplication-TileColor" content="#ff0000">
-    <meta name="msapplication-TileImage" content="mstile-144x144.png">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <!--<script src="js/vendor/modernizr-2.6.2.min.js"></script>-->
-    <script type="text/javascript">
+    ::selection {
+      color: white;
+      background: #741e80;
+    }
 
+    * {
+      box-sizing:border-box;
+    }
 
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-31006412-1']);
-          _gaq.push(['_trackPageview']);
-        
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
+    body {
+      font-family: 'Source Sans Pro', sans-serif;
+      line-height: 1.4;
+      background: #fefefe;
+    }
 
-        
-    </script>
+    html, body {
+      margin:0;
+      padding:0;
+      height: 100%;
+    }
+
+    p {
+      margin: 0;
+      max-width: 600px;
+    }
+
+    a {
+      color: #741e80;
+      text-decoration: none;
+      transition: background .2s, color .2s;
+    }
+
+    .content a:hover {
+      background: #741e80;
+      color: white;
+    }
+
+    header {
+      background: #741e80;
+      background: linear-gradient(to bottom, #741e80 0%,#1a0521 100%);
+      color: #fff;
+      position: relative;
+    }
+
+    .header-content {
+      padding: 1.5rem 1rem;
+    }
+
+    .header-content a {
+      color: #fff;
+    }
+    
+    .content {
+      padding: 1rem;
+    }
+
+    .noise {
+      background: url('images/noise.png');
+      width:100%;
+      height:100%;
+      position: absolute;
+      opacity: .15;
+    }
+
+    h1, h2 {
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .platforms {
+      color: #680E78;
+      margin-top: 1rem;
+    }
+
+    .mail, .pgp {
+      display: inline-block;
+      opacity: .75;
+    }
+
+    h2 {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      header {
+        background: #741e80;
+        background: linear-gradient(to bottom, #741e80 0%,#1a0521 100%);
+      }
+      h1, h2 {
+        font-size: 2rem;
+        display: block;
+      }
+      .mk {
+        display: flex;
+        height: 100%;
+      }
+      header {
+        width: 31%;
+        min-width: 300px;
+      }
+      .header-content, .content {
+        position: relative;
+        top: 15%;
+        padding: 1em;
+      }
+      .header-content {
+        text-align: right;
+      }
+      .mail, .pgp {
+        display: block;
+      }
+    }
+
+    @media (min-width: 1300px) {
+      h1, h2 {
+        font-size: 2.6rem;
+        margin-bottom: .1rem;
+      }
+      .header-content, .content {
+        top: 20%;
+        padding: 1em 2em;
+      }
+      p {
+        max-width: 720px;
+      }
+      p, a {
+        font-size: 1.2rem;
+      }
+    }
+
+  </style>
 </head>
-
 <body>
-    <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
+  <div class="mk">
+    <header>
+      <div class="noise"></div>
+      <div class="header-content">
+        <h1>Moritz Klack</h1>
 
-    <!-- Add your site or application content here -->
-    <div class="global">
-        <div class="main">
-
-            <header class="clearfix">
-                <h1 class="site-name">
-
-                    Moritz Klack
-                    <span>Interactive Developer</span>
-                </h1>
-                <nav class="clearfix">
-                    <ul class="clearfix">
-                        <li>
-                            <a href="#work">Work</a>
-                        </li>
-                        <li class="bordered">
-                            <a href="#about">About</a>
-                        </li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
-
-
-            <section class="work grid" id="work">
-                <h2>What I do</h2>
-                <div class="clearfix column-3">
-                    <div class="column">
-                        <figure class="anonymizr first-column">
-                        <a href="http://interaktiv.morgenpost.de/abseits-der-flugrouten/" target="_blank">
-                            <img src="img/projects/flugrouten.jpg" />
-                            <div class="project-title">Low-altitude flights over Berlin</div>
-                            <ul class="project-description">
-                                <li><i class="fa fa-check"></i> Interactive Map Application</li>
-                                <li><i class="fa fa-check"></i> Talkie Experiment</li>
-                            </ul>
-                        </a>
-                        </figure>
-                    </div>
-                    <div class="column">
-                        <figure class="speakers">
-                         <a href="http://interaktiv.morgenpost.de/tempelhofer-feld/" target="_blank">
-                            <img src="img/projects/tempelhof.jpg" />
-                            <div class="project-title">3D floor plans of the Tempelhofer Feld</div>
-                            <ul class="project-description">
-                                <li><i class="fa fa-check"></i> Building plans of the senat</li>
-                                <li><i class="fa fa-check"></i> 3D Application based on Vizicities</li>
-                            </ul>
-                        </a>
-                        </figure>
-                    </div>
-                    <div class="column ">
-                        <figure class="brainstorm last-column">
-                        <a href="http://interaktiv.morgenpost.de/mietkarte-berlin/" target="_blank">
-                            <img src="img/projects/mietkarte.jpg" />
-                            <div class="project-title">Rents in Berlin</div>
-                            <ul class="project-description">
-                                <li><i class="fa fa-check"></i> Visualization of the rents in Berlin</li>
-                                <li><i class="fa fa-check"></i> Interactive map application</li>
-                            </ul>
-                            </a>
-                        </figure>
-                    </div>
-                </div>
-
-                <div class="column-3 clearfix">
-                    <div class="column ">
-                        <figure class="twitterreader first-column">
-                        <a href="http://www.morgenpost.de/politik/article124923347/Warum-Abgeordnete-ihr-Bundestagsmandat-niederlegen.html" target="_blank">
-                            <img src="img/projects/edathy.jpg" />
-                            <div class="project-title">Why representatives vacate their position</div>
-                            <ul class="project-description">
-                                <li><i class="fa fa-check"></i> Reasons why representatives vacate their position</li>
-                                <li><i class="fa fa-check"></i> Sanky diagram</li>
-                            </ul>
-                        </a>
-                        </figure>
-                    </div>
-                    <div class="column ">
-                        <figure class="dripndrop">
-                        <a href="http://berlinwahlkarte2013.morgenpost.de" target="_blank">
-                            <img src="img/projects/wahlkarte.jpg" />
-                            <div class="project-title">Berlin election map 2013</div>
-                            <ul class="project-description">
-                                <li><i class="fa fa-check"></i> Visualization of the election 2013 in Berlin</li>
-                                <li><i class="fa fa-check"></i> Detailed view of every neighbourhood (1709)</li>
-                                
-                            </ul>
-                         </a>
-                        </figure>
-                    </div>
-                    <div class="column ">
-                        <figure class="last-column">
-                        <a href="https://github.com/moklick/generator-leaflet" target="_blank">
-                            <img src="img/projects/leaflet-gen.jpg" />
-                            <div class="project-title">Yeoman Leaflet Generator</div>
-                            <ul class="project-description">
-                                <li><i class="fa fa-check"></i> A Leaflet Generator for Yeoman</li>
-                                <li><i class="fa fa-check"></i> Helper that scaffolds out a basic map application</li>
-                            </ul>
-                        </a>
-                        </figure>
-                    </div>
-                </div>
-
-                <div class="column-3 clearfix">
-                    <div class="column ">
-                        <figure class="first-column">
-                        <a href="http://moklick.github.io/cctv-everywhere" target="_blank">
-                            <img src="img/projects/cctv-everywhere.jpg" />
-                            <div class="project-title">CCTV Everywhere</div>
-                            <ul class="project-description">
-                               <li><i class="fa fa-check"></i> An interactive CCTV Widget for your website</li>
-                            </ul>
-                        </a>
-                        </figure>
-                    </div>
-                    <div class="column ">
-                        <figure class="">
-                        <a href="http://anonymizer.io" target="_blank">
-                            <img src="img/projects/anonymizr.jpg" />
-                            <div class="project-title">Anonymizer</div>
-                            <ul class="project-description">
-                                <li><i class="fa fa-check"></i> Application for pixelating faces</li>
-                                <li><i class="fa fa-check"></i> Helper to get faceless within seconds</li>
-                            </ul>
-                        </a>
-                        </figure>
-                    </div>
-                    <div class="column ">
-                        <figure class=" last-column">
-                        <a href="http://heightmap.moritzklack.com" target="_blank">
-                            <img src="img/projects/heightmapper.jpg" />
-                            <div class="project-title">Heightmapper</div>
-                            <ul class="project-description">
-                                <li><i class="fa fa-check"></i> ThreeJS Experiment</li>
-                                <li><i class="fa fa-check"></i> 3D heightmap of images</li>
-                            </ul>
-                        </a>
-                        </figure>
-                    </div>
-                </div>
-
-                <div class="column-3 clearfix">
-                    <div class="column ">
-                        <figure class=" first-column">
-                        <a href="http://projects.moritzklack.com/the-speakers" target="_blank">
-                            <img src="img/projects/the_speakers.jpg" />
-                            <div class="project-title">The speakers</div>
-                            <ul class="project-description">
-                                <li><i class="fa fa-check"></i> Online news broadcast</li>
-                                <li><i class="fa fa-check"></i> Lively discussion about current affairs</li>
-                            </ul>
-                        </a>
-                        </figure>
-                    </div>
-                    <div class="column ">
-                        <figure class="">
-                        <a href="http://projects.moritzklack.com/drip-n-drop" target="_blank">
-                            <img src="img/projects/drip-n-drop-now.jpg" />
-                            <div class="project-title">Drip 'N' Drop</div>
-                            <ul class="project-description">
-                                <li><i class="fa fa-check"></i> Tagging playground</li>
-                                <li><i class="fa fa-check"></i> Touchfriendly paint application</li>
-                            </ul>
-                        </a>
-                        </figure>
-                    </div>
-                    <div class="column ">
-                        <figure class=" last-column">
-                        <a href="http://projects.moritzklack.com/brainstorm" target="_blank">
-                            <img src="img/projects/brainstorm-visualization.png" />
-                            <div class="project-title">Brainstorm</div>
-                            <ul class="project-description">
-                               <li><i class="fa fa-check"></i> Visualization of a brainstorm diagram</li>
-                                <li><i class="fa fa-check"></i> Multilingual tool for finding synonyms and related information</li>
-                            </ul>
-                        </a>
-                        </figure>
-                    </div>
-                </div>
-
-                <div class="information column-1">
-                    <p class="info-wide">Also check out my experiments on <a class="link" target="_blank" href="https://codepen.io/moklick">codepen</a>
-                    </p>
-                    <p class="info-mobile"><a class="link" target="_blank" href="https://codepen.io/moklick">codepen profile</a>
-                    </p>
-                </div>
-
-            </section>
-
-
-            <div class="seperator"></div>
-
-
-            <section class="about grid" id="about">
-                <h2>Who I am</h2>
-                <div class="column-3 clearfix">
-                    <div class="column">
-                        <div class="module first-column">
-                            <div class="module-title">About me</div>
-                            <div class="module-text">
-                                In 2014 I co-founded a company for data visualizations called <a href="https://webkid.io" class="sub-link">webkid</a>. Before that I finished my Bachelor of Science in <a class="sub-link" href="http://imi-bachelor.htw-berlin.de/" target="_blank">International
-                    Media and Computing</a> at the <a class="sub-link" href="http://www.htw-berlin.de" target="_blank">University HTW Berlin</a>. In my freetime I code stuff with the <a href="http://codefor.de/berlin" target="_blank" class="sub-link">OK Lab Berlin</a>.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="column">
-                        <div class="module">
-                            <div class="module-title">What I like</div>
-                            <div class="module-text">
-                                Open Source, Maps, Data Visualizations, Geo Stuff, Scraper, Data Mining, JS, Node, Multimedia Art and Generative Design. IE not!
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="module last-column">
-                            <div class="module-title">Not enough?</div>
-                            <div class="module-text">
-                                You could follow me on twitter <a href="https://twitter.com/moklick" target="_blank" class="sub-link">@moklick</i></a>. For further information about me, feel free to <a class="sub-link" href="http://moritzklack.com/download/cv_moritz_klack.pdf">download my CV</a>.
-                            </div>
-                            <!--<div class="cv">&#9733;
-                                <a class="link" hrfe="http://moritzklack.com/download/cv_moritz_klack.pdf">Download CV now!</a>&#9733;
-                            </div>-->
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <div class="seperator"></div>
-
-            <section class="contact grid" id="contact">
-                <h2>Get in contact</h2>
-                <div class="column-2 clearfix">
-                    <div class="column">
-                        <div class="module first-column pgp">
-                            <div class="module-title">Leave a message</div>
-                            <form id="contact-form" action="https://formspree.io/info@moritzklack.com" method="POST">
-                                <label for="email">E-Mail</label>
-                                <div class="input-wrapper email-wrapper">
-                                    <input class="email-field" name="email" />
-                                    <div class="form-message email-error error"></div>
-                                </div>
-
-                                <label for="message">Message</label>
-                                <div class="input-wrapper">
-                                    <textarea name="message"></textarea>
-                                    <div class="form-message message-error error"></div>
-                                    <div class="form-message success"><i class="fa fa-check"></i> Thank you for your message!</div>
-
-                                </div>
-                                <button type="submit">
-                                    <span class="normal">
-                                        <i class="fa fa-send"></i> Send
-                                    </span>
-                                    <span class="loading">
-                                        <i class="fa fa-spinner fa-spin"></i> Sending ...
-                                    </span>
-
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="module last-column">
-                            <div class="module-title">Connect</div>
-                            <ul class="social-list">
-                                <li><a target="_blank" href="https://twitter.com/moklick"><i class="fa fa-twitter"></i> <span class="sub-link">Twitter</span></a>
-                                </li>
-                                <li><a href="mailto:info@moritzklack.com"><i class="fa fa-send"></i> <span class="sub-link">info@moritzklack.com</span></a>
-                                </li>
-                                <li><a target="_blank" href="https://pgp.mit.edu/pks/lookup?op=get&search=0x59BC9757E2E6F88E"><i class="fa fa-lock"></i> <span class="sub-link">PGP: E2E6F88E</span></a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="https://github.com/moklick">
-                                        <i class="fa fa-github"></i> 
-                                        <span class="sub-link">github</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="https://codepen.io/moklick">
-                                        <i class="fa fa-codepen"></i> 
-                                        <span class="sub-link">codepen</span>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a target="_blank" href="http://cctv-everywhere.tumblr.com">
-                                        <i class="fa fa-tumblr"></i> 
-                                        <span class="sub-link">cctv tumblr</span>
-                                    </a>
-                                </li>
-
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <footer>
-               <div class="seperator seperator-light"></div>
-               <!-- <a class="webkid-logo" href="http://webkid.io" target="_blank"><img src="http://webkid.io/img/logo-200.png"/></a> -->
-            </footer>
+        <div class="mail">
+          <a href="mailto:info@moritzklack.com">info@moritzklack.com</a>
         </div>
-    </div>
+        <div class="pgp">
+          <a href="https://pgp.mit.edu/pks/lookup?op=get&search=0x59BC9757E2E6F88E">PGP: E2E6F88E</a>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="content">
+        <h2>Interactive Developer</h2>
 
+        <p>
+          I make data visualizations and rich web applications.
+          I have been working with journalists and newsrooms for several years now.
+          Furthermore, I contribute to <a href="https://github.com/moklick">open source projects</a>, write <a href="https://blog.webkid.io">blog posts</a> an run <a href="https://webkid.io">webkid.io</a>.
+        </p>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/main.js"></script>
+        <div class="platforms">
+          <a href="https://twitter.com/moklick">twitter</a> ·
+          <a href="https://github.com/moklick">github</a> · 
+          <a href="https://keybase.io/moklick">keybase</a> · 
+          <a href="https://codepen.io/moklick">codepen</a> ·
+          <a href="http://cctv-everywhere-blog.tumblr.com/">tumblr</a>
+        </div>
+      </div>
+    </section>
+  </div>
 </body>
-
 </html>
